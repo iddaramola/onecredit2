@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="ui.bootstrap.demo">
+<html lang="en" ng-app="onecredit">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +40,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4"> 
-    	<div ng-controller="RatingDemoCtrl">
+    	<div ng-controller="RatingController">
     <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['very boring','not so boring','boring', 'interesting', 'very interesting']" aria-labelledby="default-rating"></uib-rating>
     <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar &&!isReadonly">
     	{{percent}}%
@@ -49,7 +49,7 @@
 </div>
     </div>
     <div class="col-sm-4">
-    	<div ng-controller="RatingDemoCtrl">
+    	<div ng-controller="RatingController">
     <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['very boring','not so boring','boring', 'interesting', 'very interesting']" aria-labelledby="default-rating"></uib-rating>
     <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar &&!isReadonly">
     	{{percent}}%
@@ -58,7 +58,7 @@
 </div>
     </div>
     <div class="col-sm-4">
-    	<div ng-controller="RatingDemoCtrl">
+    	<div ng-controller="RatingController">
     <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['very boring','not so boring','boring', 'interesting', 'very interesting']" aria-labelledby="default-rating"></uib-rating>
     <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar &&!isReadonly">
     	{{percent}}%

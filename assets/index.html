@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ui.bootstrap.demo">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.2.js"></script>
+
+    <script src="./js/onecredit.js"></script>
+
+    
+   
+  </head>
+
+  <body style="background-color:purple">
+
+  	<h2 style="color:white;padding:5px">A simple web app that displays list of books and let users rate them on a scale of "very boring" to "very interesting"</h2>
+
+ <div class="container">
+  <div class="row">
+    <div class="col-sm-4"> 
+    	<img class="img-responsive img-rounded" src="./images/onecredit-1.jpg" alt="onecredit" width="182" height="277"> 
+    </div>
+    <div class="col-sm-4">
+    	<img class="img-responsive img-rounded" src="./images/onecredit-2.jpg" alt="onecredit" width="180" height="279">
+    </div>
+    <div class="col-sm-4">
+    	<img class="img-responsive img-rounded" src="./images/onecredit-5.jpg" alt="onecredit" width="203" height="248">
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4"> 
+    	<div ng-controller="RatingDemoCtrl">
+    <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['very boring','not so boring','boring', 'interesting', 'very interesting']" aria-labelledby="default-rating"></uib-rating>
+    <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar &&!isReadonly">
+    	{{percent}}%
+    </span>
+<button type="button" class="btn btn-sm btn-danger" ng-click="rate = 0" ng-disabled="isReadonly">Clear</button>
+</div>
+    </div>
+    <div class="col-sm-4">
+    	<div ng-controller="RatingDemoCtrl">
+    <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['very boring','not so boring','boring', 'interesting', 'very interesting']" aria-labelledby="default-rating"></uib-rating>
+    <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar &&!isReadonly">
+    	{{percent}}%
+    </span>
+<button type="button" class="btn btn-sm btn-danger" ng-click="rate = 0" ng-disabled="isReadonly">Clear</button>
+</div>
+    </div>
+    <div class="col-sm-4">
+    	<div ng-controller="RatingDemoCtrl">
+    <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['very boring','not so boring','boring', 'interesting', 'very interesting']" aria-labelledby="default-rating"></uib-rating>
+    <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar &&!isReadonly">
+    	{{percent}}%
+    </span>
+<button type="button" class="btn btn-sm btn-danger" ng-click="rate = 0" ng-disabled="isReadonly">Clear</button>
+</div>
+    </div>
+  </div>
+</div>
+
+
+  </body>
+  </html>

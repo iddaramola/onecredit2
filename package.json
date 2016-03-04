@@ -33,5 +33,9 @@
     "url": "git://github.com/anonymous node/sails user/oneCredit.git"
   },
   "author": "anonymous node/sails user",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "karma": "^0.13.21",
+    "karma-jasmine": "^0.2.2"
+  }
 }
